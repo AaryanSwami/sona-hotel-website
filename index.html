@@ -85,6 +85,15 @@
   </head>
   <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container/30">
     <div id="root"></div>
+    <script>
+      // Restore route from GitHub Pages 404.html redirect
+      (function() {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          window.history.replaceState(null, '', p + (window.location.hash || ''));
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

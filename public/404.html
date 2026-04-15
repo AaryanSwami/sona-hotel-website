@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sona Luxury Hotel</title>
+    <script>
+      // GitHub Pages SPA redirect trick
+      // Encodes the path into the query string so the main index.html can restore it
+      var path = window.location.pathname;
+      var base = '/sona-hotel-website';
+      var route = path.replace(base, '') || '/';
+      window.location.replace(
+        base + '/?p=' + encodeURIComponent(route) + window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
